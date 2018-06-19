@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Builds/OSX_Build/engine",
+            "preLaunchTask": "Build",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "osx": {
+                "MIMode": "lldb",
+            },
+            "linux": {
+                "program": "${workspaceFolder}/Builds/Linux_Build/engine",
+            },
+            "windows": {
+                "program": "${workspaceFolder}/Builds/Win_Build/engine",
+            }
+        }
+    ]
+}
