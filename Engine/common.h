@@ -21,6 +21,7 @@ using namespace std;
 #include <SDL2/SDL_image.h>
 
 /*=======CLASS DEFINITIONS=======*/
+#include "Graphics/graphics.h"
 
 
 #endif

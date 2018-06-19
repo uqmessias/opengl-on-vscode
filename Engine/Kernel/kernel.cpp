@@ -7,6 +7,9 @@ int Kernel::start()
     SDL_Window *window = createWindow("Text", 640, 480);
     SDL_GLContext glContext = SDL_GL_CreateContext(window);
 
+    Graphics* graphicsManager;
+    graphicsManager = new Graphics(window);
+
     isRunning = true;
     while (isRunning)
     {
@@ -51,6 +54,8 @@ void Kernel::update()
 
 void Kernel::render(SDL_Window *window)
 {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClearColor(255.0f /*red*/, 0.0f /*green*/, 0.0f /*blue*/, 1.0f /*alpha*/);
     SDL_GL_SwapWindow(window);
 }
 
